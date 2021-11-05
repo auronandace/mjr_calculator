@@ -1,2 +1,0 @@
-Rust used in the images is currently 1.55.
-Rerun the actions when the images next get updated (5/11/21).
