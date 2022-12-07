@@ -8,7 +8,7 @@ fn main() {
         let str_collection: Vec<&str> = calc.as_str().split_whitespace().collect();
         let (mut ops, mut nums, mut reason): (Vec<BinaryOp>, Vec<f64>, &str) = (Vec::new(), Vec::new(), "");
         let (mut num_count, mut op_count, mut correct_order_count, mut try_again) = (0, 0, 0, false);
-        for element in str_collection.iter() {
+        for element in &str_collection {
             match *element {
                 "+" | "&" => {ops.push(BinaryOp::Add); op_count += 1;}
                 "-" => {ops.push(BinaryOp::Sub); op_count += 1;}
