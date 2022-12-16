@@ -38,13 +38,13 @@ fn main() {
             reason = " order. Input should start and end with a number and alternate between operator and number.";
             try_again = true;
         }
-        if try_again {eprintln!("Invalid user input{}", reason); println!("Please try again:"); continue;}
+        if try_again {eprintln!("Invalid user input{reason}"); println!("Please try again:"); continue;}
         let mut result = perform_op(ops[0], nums[0], nums[1]);
         for index in 0..ops.len() {
             let phrase = if index == 0 && ops.len() > 1 {"1st Result: "}
                          else if index == ops.len() - 1 || ops.len() == 1 {"End Result: "} else {"Next Result: "};
             if index != 0 {result = perform_op(ops[index], result, nums[index + 1]);};
-            println!("{}{}", phrase, result);
+            println!("{phrase}{result}");
         }
     }
 }
