@@ -43,7 +43,7 @@ fn main() {
         for index in 0..ops.len() {
             let phrase = if index == 0 && ops.len() > 1 {"1st Result: "}
                          else if index == ops.len() - 1 || ops.len() == 1 {"End Result: "} else {"Next Result: "};
-            if index != 0 {result = perform_op(ops[index], result, nums[index + 1]);};
+            if index != 0 {result = perform_op(ops[index], result, nums[index + 1]);}
             println!("{phrase}{result}");
         }
     }
